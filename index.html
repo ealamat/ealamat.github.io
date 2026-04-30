@@ -195,6 +195,14 @@
               </p>
               <p>
               We implemented 4 types of elevators, including Standars, Express, Penthouse, and Freight. We also implemented each set of rules for each elevator.  
+                In our design, we assumed that Elevator should be an abstract class to be implemented because even though there are four types, they all have common basic 
+                functionality but have different rules. This avoids repeated code and simplifies the creation of elevator classes. We also decided to base SimpleScheduler and 
+                ComplexScheduler off of the Scheduler interface, because while the two classes are different, they share a lot of data. We also decided that each elevator call 
+                should be its own object because it increases readability and simplicity without negatively affecting the code's optimization. We also chose to let each elevator 
+                manage it's own movement with Simulator controlling the overall flow, and to make calls stay with the elevator until it makes it to its destination, allowing for 
+                easier tracking of where the elevator is headed. Overall, we designed our project to meet all of the requirements while being easiest to read, extend, and test. 
+                Even though we haven't implemented any details yet, the core design follows SOLID principles and utilizes the four pillars of object oriented programming.
+
               </p>
 
 
